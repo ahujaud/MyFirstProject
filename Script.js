@@ -16,12 +16,12 @@ var myColor = Color.Blue;
 var myObj = "new type";
 myObj = 45;
 myObj = {
-    "type": "localStorage",
-    'allowed': false
+    type: "localStorage",
+    allowed: false,
 };
 var myFun;
 myFun = function (x, y) {
-    console.log('this is function argument' + x + y);
+    console.log("this is function argument" + x + y);
 };
 myFun("uday", 23);
 var myNewFun = myFun;
@@ -33,12 +33,12 @@ var Obj = {
 };
 Obj = {
     age: 25,
-    name: "anurag"
+    name: "anurag",
 };
 var union;
 union = 45.36;
 union = "Uday";
 console.log(typeof myFun);
-if (typeof str === 'string') {
+if (typeof str === "string") {
+    str = "hkhk";
 }
-var tonum = 2;
