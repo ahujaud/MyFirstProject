@@ -6,7 +6,7 @@ type BankAccount = {
     deposit: (value: number) => void;
 };
 
-let bankAccount: BankAccount = {
+let bankAccountExcer: BankAccount = {
     money: 2000,
     deposit(value: number) {
         this.money += value;
@@ -20,12 +20,12 @@ type Person = {
     hobbies: string[],
 };
 
-let myself: Person = {
+let myselfExcer: Person = {
     name: "Max",
-    bankAccount,
+    bankAccount: bankAccountExcer,
     hobbies: ["Sports", "Cooking"],
 };
 
-myself.bankAccount.deposit(3000);
+myselfExcer.bankAccount.deposit(3000);
 
-console.log(myself);
+console.log(myselfExcer);
