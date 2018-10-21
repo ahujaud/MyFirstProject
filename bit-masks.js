@@ -31,7 +31,7 @@ AccountTypes.forEach(function (account) { return result |= AccountType[account];
 var isPersonal = AccountTypeMask.PERSONAL & result;
 var isCommercial = AccountTypeMask.COMMERCIAL & result;
 var isBusiness = AccountTypeMask.BUSINESS & result;
-console.log((isPersonal & !isCommercial) | (!isPersonal & isBusiness));
+console.log(((isPersonal & ~isCommercial) | (~isPersonal & isBusiness)));
 console.log(result);
 console.log(isPersonal);
 console.log(isCommercial);
