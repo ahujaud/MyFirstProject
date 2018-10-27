@@ -27,7 +27,6 @@ var AccountTypes = [
     "CARDS",
 ];
 var result = 0;
-AccountTypes.forEach(function (account) { return result |= AccountType[account]; });
 var isPersonal = AccountTypeMask.PERSONAL & result;
 var isCommercial = AccountTypeMask.COMMERCIAL & result;
 var isBusiness = AccountTypeMask.BUSINESS & result;

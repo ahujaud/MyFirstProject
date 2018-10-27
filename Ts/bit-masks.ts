@@ -37,7 +37,7 @@ let AccountTypes: string[] = [
 
 let result = 0;
 // tslint:disable-next-line:no-bitwise
-AccountTypes.forEach((account: string) => result |= AccountType[account]);
+// AccountTypes.forEach((account: string) => result |= AccountType[account]);
 
 // tslint:disable-next-line:no-bitwise
 let isPersonal = AccountTypeMask.PERSONAL & result;
