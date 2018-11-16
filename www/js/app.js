@@ -1,79 +1,4 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    }
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var doubleSol = function (value) { return value * 2; };
-console.log(doubleSol(10));
-var greetSol = function (name) {
-    if (name === void 0) { name = "Max"; }
-    return console.log("Hello, " + name);
-};
-greetSol();
-greetSol("Anna");
-var numbersSol = [-3, 33, 38, 5];
-console.log(Math.min.apply(Math, numbersSol));
-var newArraySol = [55, 20];
-newArraySol.push.apply(newArraySol, numbersSol);
-console.log(newArraySol);
-var testResultsSol = [3.89, 2.99, 1.38];
-var result1Sol = testResultsSol[0], result2Sol = testResultsSol[1], result3Sol = testResultsSol[2];
-console.log(result1Sol, result2Sol, result3Sol);
-var scientistSol = { firstName: "Will", experience: 12 };
-var FirstName = scientistSol.firstName, Experience = scientistSol.experience;
-console.log(FirstName, Experience);
-var str = "My Name is Uday Ahuja";
-var num = 12.45;
-var bool = true;
-var arr = ["first", "second", "third"];
-var arrTupe = ["Uday", 23];
-var Color;
-(function (Color) {
-    Color[Color["Green"] = 0] = "Green";
-    Color[Color["Blue"] = 1] = "Blue";
-    Color[Color["Red"] = 100] = "Red";
-    Color[Color["White"] = 101] = "White";
-})(Color || (Color = {}));
-console.log(Color.Green);
-var myColor = Color.Blue;
-var myObj = "new type";
-myObj = 45;
-myObj = {
-    type: "localStorage",
-    allowed: false,
-};
-var myFun;
-myFun = function (x, y) {
-    console.log("this is function argument" + x + y);
-};
-myFun("uday", 23);
-var myNewFun = myFun;
-console.log(myNewFun);
-console.log(myNewFun("new Type", 23));
-var Obj = {
-    name: "uday",
-    age: 23,
-};
-Obj = {
-    age: 25,
-    name: "anurag",
-};
-var union;
-union = 45.36;
-union = "Uday";
-console.log(typeof myFun);
-if (typeof str === "string") {
-    str = "hkhk";
-}
 var AccountType;
 (function (AccountType) {
     AccountType[AccountType["UKBAP"] = 1] = "UKBAP";
@@ -102,7 +27,6 @@ var AccountTypes = [
     "CARDS",
 ];
 var result = 0;
-AccountTypes.forEach(function (account) { return result |= AccountType[account]; });
 var isPersonal = AccountTypeMask.PERSONAL & result;
 var isCommercial = AccountTypeMask.COMMERCIAL & result;
 var isBusiness = AccountTypeMask.BUSINESS & result;
@@ -111,6 +35,21 @@ console.log(result);
 console.log(isPersonal);
 console.log(isCommercial);
 console.log(isBusiness);
+
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var Car = (function () {
     function Car(name) {
         this.accelaration = 0;
@@ -185,14 +124,84 @@ personObj.firstName = "Uday";
 console.log(personObj.firstName);
 personObj.firstName = "Ahuja";
 console.log(personObj.firstName);
-define("date-extension-usage", ["require", "exports", "date.extension"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    console.log("output is here:" + new Date().getTimeString());
-});
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+require("./date.extension");
+console.log("output is here:" + new Date().getTimeString());
+
+"use strict";
 Date.prototype.getTimeString = function () {
     return this.getTime().toString();
 };
+
+"use strict";
+var doubleSol = function (value) { return value * 2; };
+console.log(doubleSol(10));
+var greetSol = function (name) {
+    if (name === void 0) { name = "Max"; }
+    return console.log("Hello, " + name);
+};
+greetSol();
+greetSol("Anna");
+var numbersSol = [-3, 33, 38, 5];
+console.log(Math.min.apply(Math, numbersSol));
+var newArraySol = [55, 20];
+newArraySol.push.apply(newArraySol, numbersSol);
+console.log(newArraySol);
+var testResultsSol = [3.89, 2.99, 1.38];
+var result1Sol = testResultsSol[0], result2Sol = testResultsSol[1], result3Sol = testResultsSol[2];
+console.log(result1Sol, result2Sol, result3Sol);
+var scientistSol = { firstName: "Will", experience: 12 };
+var FirstName = scientistSol.firstName, Experience = scientistSol.experience;
+console.log(FirstName, Experience);
+
+"use strict";
+var str = "My Name is Uday Ahuja";
+var num = 12.45;
+var bool = true;
+var arr = ["first", "second", "third"];
+var arrTupe = ["Uday", 23];
+var Color;
+(function (Color) {
+    Color[Color["Green"] = 0] = "Green";
+    Color[Color["Blue"] = 1] = "Blue";
+    Color[Color["Red"] = 100] = "Red";
+    Color[Color["White"] = 101] = "White";
+})(Color || (Color = {}));
+console.log(Color.Green);
+var myColor = Color.Blue;
+var myObj = "new type";
+myObj = 45;
+myObj = {
+    type: "localStorage",
+    allowed: false,
+};
+var myFun;
+myFun = function (x, y) {
+    console.log("this is function argument" + x + y);
+};
+myFun("uday", 23);
+var myNewFun = myFun;
+console.log(myNewFun);
+console.log(myNewFun("new Type", 23));
+var Obj = {
+    name: "uday",
+    age: 23,
+};
+Obj = {
+    age: 25,
+    name: "anurag",
+};
+var union;
+union = 45.36;
+union = "Uday";
+console.log(typeof myFun);
+if (typeof str === "string") {
+    str = "hkhk";
+}
+
+"use strict";
 var bankAccountExcer = {
     money: 2000,
     deposit: function (value) {
